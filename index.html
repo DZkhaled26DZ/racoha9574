@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محلل ذيول الشموع</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="candlestick-icon"><path d="M9 5v4"></path><path d="M9 13v6"></path><path d="M15 5v2"></path><path d="M15 11v8"></path><path d="M5 3h4v6H5z"></path><path d="M11 11h4v4h-4z"></path></svg>
+                <div>
+                    <h1>محلل ذيول الشموع</h1>
+                    <p class="subtitle">تحليل مباشر لذيول الشموع في سوق العملات الرقمية</p>
+                </div>
+            </div>
+            <div class="last-update"></div>
+        </header>
+
+        <main>
+            <div class="controls">
+                <button id="toggleAnalysis" class="btn btn-primary">
+                    <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    بدء التحليل
+                </button>
+                <button id="toggleNotifications" class="btn btn-secondary">
+                    <svg class="bell-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                    التنبيهات مفعلة
+                </button>
+            </div>
+
+            <div id="results" class="results">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>العملة</th>
+                            <th>التوقيت</th>
+                            <th>نسبة الذيل</th>
+                            <th>السعر</th>
+                            <th>الاتجاه</th>
+                            <th>التوصية</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsBody"></tbody>
+                </table>
+            </div>
+        </main>
+
+        <div id="alert" class="alert">
+            <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <p>تم اكتشاف نمط جديد للشموع!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
